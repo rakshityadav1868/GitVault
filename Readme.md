@@ -10,10 +10,6 @@ A web application that allows users to search GitHub users and repositories, wit
 
 GitVault is a dynamic GitHub explorer that combines username and repository search in a single, intuitive interface. Search for any GitHub user to explore their public repositories, or search for specific repositories across GitHub. Filter by programming language, star count, and sort by various metrics to discover projects that match your interests.
 
-Live Demo: (Will be added after deployment)
-
----
-
 ## Features
 
 ### Core Features (Milestone 3)
@@ -82,10 +78,3 @@ GET https://api.github.com/users/{username}
 Fetches user profile info (avatar, bio, followers, repos count)
 
 ---
-
-## Project Structure
-
-GitVault/
-├── index.html          (Main HTML file)
-├── style.css           (Styling)
-├── script.js           (JavaScript logic)
