@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    background-color: #0366d6;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+header button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    color: #0366d6;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+}
+
+header button:hover {
+    background-color: #f0f0f0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0px 20px;
+}
+.search-section{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 20000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-section input{
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    flex: 1;
+}
+.search-section button{
+    padding: 10px 20px;
+    background-color: #0366d6;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-section button:hover {
+    background-color: #0256c7;
+}
+
+.filter-section{
+    margin-bottom: 20px;
+    
+}
+
+.filter-section select{
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.result-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.result-section div{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.result-section div:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.result-section h2{
+    color: #0366d6;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.result-section p{
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
