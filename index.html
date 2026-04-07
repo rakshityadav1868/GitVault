@@ -6,16 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>GitVault</h1>
-    <p>Discover Github</p>
-    <button id="theme-toggle">Button</button>
-
-    <div>
-        <input type="text" name="" id="search-input">
-        <button id="search-btn">Search</button>
-    </div>
-    <div id="results-container">
-
+    <header>
+        <h1>GitVault</h1>
+        <button id="toggle">Dark</button>
+    </header>
+    <div class="container">
+        <div class="search-section">
+            <input type="text" placeholder="enter name of user" id="search-input">
+            <button id="search-btn">Search</button>
+        </div> 
+        <div class="filter-section">
+            <select id="lang-filter">
+                <option value="all">All Language</option>
+            </select>
+        </div>
+        <div class="result-section">
+            
+        </div>
     </div>
 </body>
 </html>
