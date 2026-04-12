@@ -1,18 +1,19 @@
+let resdata = []
+let displayData = []
+let currIndex = 10
 function renderdata(data) {
     const resultdiv = document.querySelector('.result-section')
-    resultdiv.innerHTML = ""
-    data.forEach(x => {
-        resultdiv.innerHTML +=
-            `
-<div>
-<h2>${x.name}</h2>
-<p>${x.description}</p>
-</div>
-`
-    })
+    const viewbtn = document.getElementById("view-more-btn")
 
+    resultdiv.innerHTML = data.slice(0, currIndex)
+        .map(x => `
+        <div>
+                <h2>${x.name}</h2>
+                <p>${x.description}</p>
+            </div >
+            `).join("")
+    viewbtn.style.display = currIndex < data.length ? "block" : "none"
 }
-let resdata = []
 document.getElementById("search-btn").addEventListener('click', async () => {
     const username = document.getElementById('search-input').value
     if (!username) {
@@ -23,7 +24,10 @@ document.getElementById("search-btn").addEventListener('click', async () => {
         const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
         const data = await res.json()
         resdata = data
-        renderdata(resdata)
+        displayData = data
+        currIndex = 10
+
+        renderdata(displayData)
     } catch (err) {
         alert("Error:" + err)
     }
@@ -47,5 +51,11 @@ document.getElementById("sort-filter").addEventListener("change", (e) => {
     } else {
         sorted = resdata
     }
-    renderdata(sorted)
+    displayData = sorted
+    currIndex = 10
+    renderdata(displayData)
+})
+document.getElementById("view-more-btn").addEventListener("click", () => {
+    currIndex += 10
+    renderdata(displayData)
 })
