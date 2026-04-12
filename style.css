@@ -7,6 +7,12 @@
 body {
     background-color: #ffffff;
     font-family: Arial, sans-serif;
+    color: black;
+}
+
+body.dark{
+    background-color: black;
+    color: white;
 }
 
 header{
